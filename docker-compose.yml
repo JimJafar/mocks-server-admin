@@ -1,0 +1,22 @@
+version: '3'
+services:
+  api:
+    build:
+      context: ./api
+    ports:
+      - "3100:3100"
+    container_name: mocks-server-admin-api
+    stdin_open: true
+    volumes:
+      - ./api:/usr/src/app
+      - /usr/src/app/node_modules
+  client:
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+    container_name: mocks-server-admin-client
+    stdin_open: true
+    volumes:
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
