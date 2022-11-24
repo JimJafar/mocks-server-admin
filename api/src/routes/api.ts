@@ -5,6 +5,7 @@ import adminMw from './shared/adminMw';
 import User from '@src/models/User';
 import authRoutes from './auth-routes';
 import userRoutes from './user-routes';
+import mockRoutes from './mock-routes';
 
 
 // **** Init **** //
@@ -62,6 +63,16 @@ userRouter.delete(
 // Add userRouter
 apiRouter.use(userRoutes.paths.basePath, adminMw, userRouter);
 
+// **** Setup mock routes **** //
+
+const mockRouter = Router();
+
+// Get all users
+mockRouter.get(mockRoutes.paths.list, mockRoutes.list);
+mockRouter.get(mockRoutes.paths.read, mockRoutes.get);
+
+// Add mockRouter
+apiRouter.use(mockRoutes.paths.basePath, mockRouter);
 
 // **** Export default **** //
 

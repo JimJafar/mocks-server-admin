@@ -5,6 +5,8 @@ services:
       context: ./api
     ports:
       - "3100:3100"
+      - "3110:3110"
+      - "8081:8081"
     container_name: mocks-server-admin-api
     stdin_open: true
     volumes:
