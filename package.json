@@ -1,0 +1,27 @@
+{
+  "name": "mocks-server-admin",
+  "version": "1.0.0",
+  "description": "A Dockerised application that includes mocks-server and an admin GUI to simplify management of your mock routes.",
+  "main": "api/src/index.ts",
+  "scripts": {
+    "dev:api": "cd api && npm run dev",
+    "dev:client": "cd client && npm start",
+    "dev": "npm run dev:api & npm run dev:client",
+    "test": "cd api && npm run test && cd ../client && npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JimJafar/mocks-server-admin.git"
+  },
+  "keywords": [
+    "mocks-server",
+    "mocking",
+    "api"
+  ],
+  "author": "Jim Sangwine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JimJafar/mocks-server-admin/issues"
+  },
+  "homepage": "https://github.com/JimJafar/mocks-server-admin#readme"
+}

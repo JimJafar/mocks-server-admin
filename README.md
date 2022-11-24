@@ -2,8 +2,6 @@
 
 A Dockerised application that includes mocks-server and an admin GUI to simplify management of your mock routes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Developing
 
 ```shell
