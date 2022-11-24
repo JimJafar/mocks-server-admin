@@ -1,4 +1,5 @@
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 import morgan from 'morgan';
 import path from 'path';
 import helmet from 'helmet';
@@ -24,6 +25,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(cookieParser(EnvVars.cookieProps.secret));
+app.use(cors({
+  origin: 'http://localhost:3000'
+}))
 
 // Show routes called in console during development
 if (EnvVars.nodeEnv === NodeEnvs.Dev) {

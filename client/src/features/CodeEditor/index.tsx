@@ -1,14 +1,14 @@
-import React from 'react';
-import Editor from 'react-simple-code-editor';
+import React from 'react'
+import Editor from 'react-simple-code-editor'
 // @ts-ignore
-import { highlight, languages } from 'prismjs/components/prism-core';
-import 'prismjs/components/prism-json';
-import 'prismjs/themes/prism-dark.css';
+import { highlight, languages } from 'prismjs/components/prism-core'
+import 'prismjs/components/prism-json'
+import 'prismjs/themes/prism-dark.css'
 
-function App() {
+function CodeEditor() {
   const [code, setCode] = React.useState(
-    `function add(a, b) {\n  return a + b;\n}`
-  );
+    `function add(a, b) {\n  return a + b\n}`
+  )
   return (
     <Editor
       value={code}
@@ -20,5 +20,7 @@ function App() {
         fontSize: 12,
       }}
     />
-  );
+  )
 }
+
+export default CodeEditor

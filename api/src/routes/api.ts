@@ -70,6 +70,9 @@ const mockRouter = Router();
 // Get all users
 mockRouter.get(mockRoutes.paths.list, mockRoutes.list);
 mockRouter.get(mockRoutes.paths.read, mockRoutes.get);
+mockRouter.post(mockRoutes.paths.read, mockRoutes.add);
+mockRouter.put(mockRoutes.paths.read, mockRoutes.update);
+mockRouter.delete(mockRoutes.paths.read, mockRoutes.remove);
 
 // Add mockRouter
 apiRouter.use(mockRoutes.paths.basePath, mockRouter);
